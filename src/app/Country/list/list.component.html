@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h3>Countries</h3>
+    </div>
+    <div class="card-body">
+      <table class="table table-hover">
+        <thead>
+          <tr class="text-center">
+            <th>ID</th>
+            <th>Country</th>
+            <th>Population</th>
+            <th>Options</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let country of countries" class="text-center">
+            <td>{{country.id}}</td>
+            <td>{{country.name}}</td>
+            <td>{{country.population}}</td>
+            <td>
+              <button (click)="Edit(country)" class="btn btn-warning">Modify</button>
+              <button (click)="Delete(country)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
